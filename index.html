@@ -29,10 +29,21 @@
         xhr.open("GET", "me.txt", true);
         xhr.send();
         
+        var param = "fname=John&lname=Doe";
         // pretty advanced
 
         xhr.open("GET", "me.txt?name=" + value, true);
         xhr.send();
+
+        // normal post method
+
+        xhr.open("POST", "me.txt", true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send();
+
+        xhr.open("POST", "me.txt", true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send(param);
 
         </script>
     </body>
