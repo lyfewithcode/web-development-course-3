@@ -20,11 +20,20 @@
             } catch(e) {
                 alert('error')
             }
-        }  
+        }
+        
+        var value = "best";
+
+        // normal request code using get method
         
         xhr.open("GET", "me.txt", true);
         xhr.send();
         
+        // pretty advanced
+
+        xhr.open("GET", "me.txt?name=" + value, true);
+        xhr.send();
+
         </script>
     </body>
 </html>
