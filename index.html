@@ -4,6 +4,9 @@
         <title></title>
     </head>
     <body>
+        <div id="result">
+
+        </div>
         <script type="text/javascript">
 
         var xhr;
@@ -28,7 +31,7 @@
         
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                
+                document.getElementById('result').innerHTML = this.responseText;
             }
         }
 
