@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+        var xhr;
+        if(window.ActiveXObject) {
+            try {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch(e) {
+                alert('error');
+            }
+            
+        } else if(window.XMLHttpRequest) {
+            try {
+                xhr = new XMLHttpRequest();
+            } catch(e) {
+                alert('error')
+            }
+        }        
+        </script>
+    </body>
+</html>
