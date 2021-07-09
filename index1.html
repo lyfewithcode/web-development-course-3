@@ -26,27 +26,24 @@
 
         // normal request code using get method
         
-        xhr.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                
-            }
-        }
-
-        /* readyState :
-        0 - Request Not Initialized
-        1 - Server Connection Established
-        2 - Request Received
-        3 - Server Processing The Request
-        4 - Processing Finished and Response Got Ready
-        
-        status :
-        200 - Ok
-        404 - Not Found
-        403 - Forbidden
-        */
-
         xhr.open("GET", "me.txt", true);
         xhr.send();
+        
+        var param = "fname=John&lname=Doe";
+        // pretty advanced
+
+        xhr.open("GET", "me.txt?name=" + value, true);
+        xhr.send();
+
+        // normal post method
+
+        xhr.open("POST", "me.txt", true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send();
+
+        xhr.open("POST", "me.txt", true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send(param);
 
         </script>
     </body>
